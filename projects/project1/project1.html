@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Project 1</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,26 +11,22 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="project1-styles.css"> 
 
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav>
-        <div class="left">
-            <a href="/">Dennis Gianelli</a>
-        </div>
-        <div class="right">
-            <a href="https://github.com/dennues" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github"></i>
-                <span>Github</span>
-            </a>
-            <a href="mailto:dennis-gianelli@web.de" target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Email</span>
-            </a>
-        </div>
-    </nav>
+
+    <div id="navbar"></div>
+
+    <script>
+    fetch("../../nav.html")
+        .then(res => res.text())
+        .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+        });
+    </script>
 
     <main>
         <h3>What is this project?</h3>

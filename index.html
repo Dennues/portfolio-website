@@ -17,21 +17,17 @@
 
 <body>
     <!-- Navigation Bar -->
-    <nav>
-        <div class="left">
-            <a href="/">Dennis Gianelli</a>
-        </div>
-        <div class="right">
-            <a href="https://github.com/dennues" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github"></i>
-                <span>Github</span>
-            </a>
-            <a href="mailto:dennis-gianelli@web.de" target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Email</span>
-            </a>
-        </div>
-    </nav>
+
+    <div id="navbar"></div>
+
+    <script>
+    fetch("nav.html")
+        .then(res => res.text())
+        .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+        });
+    </script>
+
 
     <main>
         <!-- Section 1: Personal Information-->
@@ -95,7 +91,7 @@
             <div class="text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repudiandae, voluptas ipsam minima illum at architecto velit animi nobis inventore exercitationem vel laudantium, impedit aut?
             <div class="cells">
-                <a href="project1/project1.html">    
+                <a href="projects/project1/project1.html">    
                     <div class="cell">
                         <h3>Project 1</h3>
                         <img src="pictures/face-placeholder.webp" alt="project1">
@@ -126,13 +122,13 @@
                 
                 <form>
                     <label for="name">Name</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" required>
 
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
 
                     <button type="submit">Send Message</button>
                 </form>
