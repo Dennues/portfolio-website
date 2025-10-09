@@ -5,29 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="styles.css"> 
-
+    <!-- Header -->
+    <script src="/js/head.js"></script>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-
+    <!-- Navbar -->
     <div id="navbar"></div>
-
-    <script>
-    fetch("nav.html")
-        .then(res => res.text())
-        .then(html => {
-        document.getElementById("navbar").innerHTML = html;
-        });
-    </script>
-
+    <script src="/js/navbar.js"></script>
 
     <main>
         <!-- Section 1: Personal Information-->
@@ -90,14 +75,12 @@
             <h2>Experience</h2>
             <div class="text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae repudiandae, voluptas ipsam minima illum at architecto velit animi nobis inventore exercitationem vel laudantium, impedit aut?
-            <div class="cells">
-                <a href="projects/project1/project1.html">    
+            <div class="cells">   
                     <div class="cell">
                         <h3>Project 1</h3>
                         <img src="pictures/face-placeholder.webp" alt="project1">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos nesciunt obcaecati non pariatur dolorum odit suscipit repellat tempore officia velit fuga labore est esse facilis autem alias excepturi architecto inventore commodi eum, deleniti libero optio modi! Culpa, unde similique nihil molestiae minus quam? Facilis, maiores ipsum neque cumque error iusto.</p>
                     </div>
-                </a>
 
                     <div class="cell">
                         <h3>Project 2</h3>
