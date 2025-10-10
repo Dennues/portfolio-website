@@ -3,19 +3,21 @@
 .experience-section {
     padding: 0 50px;
     margin-bottom: 100px;
+    color: var(--text-color)
 }   
 
 .experience-section h2 {
     text-align: center;
     font-size: 35px;
+    margin-bottom: 10px;
 }
 
 .experience-section .text {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .experience-section .cells {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -27,7 +29,7 @@
     padding: 10px 20px;
     margin: 10px;
 
-    border: 2px solid #d3d3d3;
+    border: 2px solid var(--dark-green);
     border-radius: 15px;
 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -36,11 +38,11 @@
 
 .experience-section .cells .cell:hover {
     color: var(--text-color);
-    border: 2px solid var(--text-color);
+    border: 1.5px solid var(--text-color);
     
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-color: #aaa;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-color: var(--text-color);
 }
 
 .experience-section .cells .cell h3{

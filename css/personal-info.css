@@ -8,14 +8,16 @@
     margin: 50px 0;
     margin-bottom: 100px;
     gap: 40px;
+    color: var(--text-color);
 }
 
 .personal-info .beschreibung {
     flex: 5; 
 }
 
-.personal-info .text h2{
+.personal-info .text h2 {
     font-size: 45px;
+    margin-bottom: 10px;
 }
 
 .personal-info .text .links {
@@ -25,17 +27,17 @@
 .personal-info .text .links a {
     display: inline-block;
     padding: 5px 10px;
-    border: 2px solid var(--text-color);
-    border-radius: 5px;
+    border: 1.5px solid var(--text-color);
+    border-radius: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    transition: .1s;
+    transition: .2s;
 }
 
 .personal-info .text .links a:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    border-color: #aaa;
+    border-color: var(--dark-green);
 }
 
 .personal-info .picture {
@@ -47,5 +49,4 @@
 .personal-info .picture img {
     width: 350px;
     border-radius: 50%;
-
 }

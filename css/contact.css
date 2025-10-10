@@ -3,6 +3,7 @@
 .contact-section {
     padding: 0 50px;
     margin-bottom: 100px;
+    color: var(--text-color);
 }
 
 .contact-section h2 {
@@ -20,13 +21,14 @@
 }
 
 .contact-section .group form {
+    margin-top: 10px;
     flex: 3;
     display: flex;
     flex-direction: column;
 }
 
 .contact-section .group form label {
-    font-size: 18px;
+        font-size: 18px;
     margin-bottom: 5px;
 }
 
@@ -39,11 +41,11 @@
     margin-bottom: 15px;
     outline: none;
     resize: none;
+    color: var(--text-color);
 }
 
 .contact-section .group form button {
-    font-size: 16px;
-    color: #fff;
+    color: var(--dark-green);
     background-color: var(--text-color);
     border-radius: 5px;
     border: none;
@@ -53,7 +55,10 @@
 }
 
 .contact-section .group form button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    background-color: #333;
+    border: 1.5px solid var(--text-color);
+    
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-color: var(--text-color);
+
 }
