@@ -1,0 +1,51 @@
+/* Section 1: Personal Info */
+
+.personal-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    margin-bottom: 100px;
+    gap: 40px;
+}
+
+.personal-info .beschreibung {
+    flex: 5; 
+}
+
+.personal-info .text h2{
+    font-size: 45px;
+}
+
+.personal-info .text .links {
+    margin-top: 25px;
+}
+
+.personal-info .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+
+.personal-info .text .links a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-color: #aaa;
+}
+
+.personal-info .picture {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.personal-info .picture img {
+    width: 350px;
+    border-radius: 50%;
+
+}

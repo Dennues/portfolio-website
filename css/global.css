@@ -1,0 +1,22 @@
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-green);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
