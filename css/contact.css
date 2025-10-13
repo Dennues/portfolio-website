@@ -46,7 +46,7 @@
 
 .contact-section .group form button {
     font-size: 18px;
-    color: var(--color-accent-dark);
+    color: var(--color-bg);
     background-color: var(--color-text);
     border-radius: 10px;
     border: none;
