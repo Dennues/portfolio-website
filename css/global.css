@@ -13,10 +13,10 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--light-green);
+    background-color: var(--color-bg);
 }
 
 a {
-    color: var(--text-color);
+    color: var(--color-text);
     text-decoration: none;
 }

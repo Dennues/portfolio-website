@@ -3,7 +3,7 @@
 .contact-section {
     padding: 0 50px;
     margin-bottom: 100px;
-    color: var(--text-color);
+    color: var(--color-text)
 }
 
 .contact-section h2 {
@@ -17,7 +17,7 @@
 
 .contact-section .group .text {
     flex: 3;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .contact-section .group form {
@@ -28,37 +28,36 @@
 }
 
 .contact-section .group form label {
-        font-size: 18px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
 .contact-section .group form input,
 .contact-section .group form textarea {
-    border: 2px solid var(--text-color);
-    border-radius: 3px;
+    border: 1.5px solid var(--color-text);
+    border-radius: 5px;
     background-color: transparent;
     padding: 10px;
     margin-bottom: 15px;
     outline: none;
     resize: none;
-    color: var(--text-color);
+    color: var(--color-text);
 }
 
 .contact-section .group form button {
-    color: var(--dark-green);
-    background-color: var(--text-color);
-    border-radius: 5px;
+    font-size: 18px;
+    color: var(--color-accent-dark);
+    background-color: var(--color-text);
+    border-radius: 10px;
     border: none;
     height: 50px;
     cursor: pointer;
-    transition: .1s;
+    transition: .2s;
 }
 
 .contact-section .group form button:hover {
-    border: 1.5px solid var(--text-color);
-    
+    border: 1.5px solid var(--color-text);
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    border-color: var(--text-color);
-
+    border-color: var(--color-text);
 }

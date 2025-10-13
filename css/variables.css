@@ -1,9 +1,18 @@
 /* Variables */
 
 :root {
-    --text-color: #fefae0;
-    --light-green: #606c38;
-    --dark-green: #283618;
-    --light-orange: #dda15e;
-    --dark-orange: #bc6c25;
+    /* colors */
+    --color-cream: #fefae0;
+    --color-lgreen: #606c38;
+    --color-dgreen: #283618;
+    --color-lorange: #dda15e;
+    --color-dorange: #bc6c25;
+
+    /* useable colors */
+    --color-bg: var(--color-dgreen);
+    --color-bg-alt: var(--color-lgreen);
+    --color-text: var(--color-cream);
+    --color-accent: var(--color-lorange);
+    --color-accent-dark: var(--color-dorange);
+    --color-border: var(--color-cream);
 }
