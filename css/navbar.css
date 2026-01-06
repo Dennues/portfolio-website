@@ -1,24 +1,35 @@
 /* Navbar */
 
 nav {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-    height: 80px;
-
-    box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    margin: 20px 50px;
+    padding: 15px 40px;
+    height: 60px;
+    position: relative;
+    border-radius: 10px;
+    background: rgba(40, 54, 24, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(96, 108, 56, 0.3);
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(96, 108, 56, 0.15);
 }
 
+
 nav .left a {
-    color: var(color-text);
+    color: var(--color-text);
     font-size: 22px;
     font-weight: 600;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 20px transparent;
 }
 
 nav .left a:hover {
-    color: var(--color-accent);
+    color: var(--color-text);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
 }
 
 nav .right a {
@@ -36,7 +47,8 @@ nav .right a:first-child:after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--color-text);
+    background: linear-gradient(90deg, var(--color-text), var(--color-text));
+    box-shadow: 0 0 10px var(--color-accent);
     transition: width 0.3s ease-out;
 }
 
@@ -46,19 +58,62 @@ nav .right a:first-child:hover::after {
 
 nav .right a:last-child {
     color: var(--color-bg);
-    background-color: var(--color-text);
+    background: linear-gradient(135deg, var(--color-text), rgba(255, 255, 255, 0.8));
     padding: 5px 15px;
     border-radius: 5px;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 nav .right a:last-child:hover {
-    background-color: var(--color-text);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), var(--color-text));
     padding: 5px 15px;
     border-radius: 5px;
-    color: var(--color-accent);
+    color: var(--color-green);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 nav .right a span {
     margin-left: 5px;
+}
+
+/* Blätter die von der Navbar "abfallen" */
+nav::before,
+nav::after {
+    content: '';
+    position: fixed;
+    width: 14px;
+    height: 14px;
+    background: rgba(96, 108, 56, 0.4);
+    border-radius: 0 100% 0 100%;
+    filter: blur(0.3px);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+nav::before {
+    top: 70px;
+    left: 25%;
+    animation: navLeafFall 10s infinite ease-in;
+}
+
+nav::after {
+    top: 70px;
+    right: 30%;
+    animation: navLeafFall 12s infinite ease-in 4s;
+}
+
+@keyframes navLeafFall {
+    0% { 
+        transform: translateY(0) rotate(0deg) translateX(0); 
+        opacity: 0; 
+    }
+    3% { 
+        opacity: 0.6; 
+    }
+    100% { 
+        transform: translateY(100vh) rotate(480deg) translateX(100px); 
+        opacity: 0; 
+    }
 }
