@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website - Dennis Gianelli</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="/js/head.js"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script src="/js/navbar.js"></script>
+
+    <main class="project-page">
+
+        <div class="back-btn-wrapper">
+            <a href="index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+        </div>
+
+        <section class="hero-text-only">
+            <span class="project-tag">HTML • CSS • JavaScript</span>
+            <h1>This Portfolio</h1>
+            <p class="project-subtitle">
+                Why I built it, what I learned and how it works.
+            </p>
+        </section>
+
+        <hr class="project-divider">
+
+        <div class="project-overview">
+            <div class="project-overview-main">
+
+                <h2>Why I built this</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus possimus corrupti 
+                    exercitationem asperiores quaerat! Animi eligendi molestias eos voluptas excepturi 
+                    error atque, soluta itaque? Quas asperiores perferendis, possimus accusamus dignissimos 
+                    iste itaque porro magnam iusto animi vel maxime voluptas et.
+                </p>
+
+                <h2 style="margin-top: 40px;">What I learned</h2>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-circle-dot"></i> Structuring a multi-page site with shared components (navbar, head)</li>
+                    <li><i class="fa-solid fa-circle-dot"></i> CSS variables, foundation of responsive layouts and simple animations</li>
+                    <li><i class="fa-solid fa-circle-dot"></i> Keeping code readable and consistent across pages</li>
+                </ul>
+
+                <h2 style="margin-top: 40px;">How it works</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cumque provident modi 
+                    adipisci tempore officia, veritatis eligendi voluptates hic molestiae commodi? Consectetur, deleniti.
+                    Repellat ratione aliquid error voluptatem obcaecati? Laudantium sequi rerum voluptas sit, voluptatem
+                    nam architecto saepe tempore sapiente.
+                </p>
+
+            </div>
+            <aside>
+                <div class="meta-card">
+                    <h3>Tech Stack</h3>
+                    <ul>
+                        <li>HTML / CSS</li>
+                        <li>JavaScript</li>
+                        <li>Google Fonts</li>
+                    </ul>
+                </div>
+                <div class="meta-card">
+                    <h3>Links</h3>
+                    <div class="meta-links">
+                        <a href="https://github.com/dennues" class="meta-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <section class="project-gallery">
+            <h2>Screenshots</h2>
+            <div class="gallery-grid" id="gallery">
+                <img src="pictures/face-placeholder.webp" alt="Homepage">
+                <img src="pictures/face-placeholder.webp" alt="Skills section">
+                <img src="pictures/face-placeholder.webp" alt="Contact section">
+            </div>
+
+            <div class="lightbox" id="lightbox">
+                <button class="lightbox-close" id="lightbox-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <img id="lightbox-img" src="" alt="">
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const lbClose = document.getElementById('lightbox-close');
+
+        gallery.addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG') {
+                lbImg.src = e.target.src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        const close = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        lbClose.addEventListener('click', close);
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    </script>
+</body>
+</html>

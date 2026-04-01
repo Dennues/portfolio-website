@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTD Explorer - Dennis Gianelli</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="/js/head.js"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <script src="/js/navbar.js"></script>
+
+    <main class="project-page">
+
+        <div class="back-btn-wrapper">
+            <a href="index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+        </div>
+
+        <!-- side by side layout-->
+        <section class="project-hero">
+            <div class="project-hero-meta">
+                <span class="project-tag">Python • Streamlit • Plotly</span>
+                <h1>GTD Explorer</h1>
+                <p class="project-subtitle">
+                    An interactive dashboard for exploring 50 years of global terrorism data, built to make a large and sensitive dataset explorable.
+                </p>
+            </div>
+            <div class="project-hero-image">
+                <img src="https://raw.githubusercontent.com/Dennues/GTD_Dashboard/main/screenshots/countryview1.png" alt="GTD Dashboard">
+            </div>
+        </section>
+
+        <hr class="project-divider">
+
+        <div class="project-overview">
+            <div class="project-overview-main">
+                <h2>About the Project</h2>
+                <p>
+                    A data visualization project built for a course at FU Berlin, using the 
+                    <a href="https://www.start.umd.edu/data-tools/GTD" target="_blank" rel="noopener noreferrer">Global Terrorism Database</a> — 
+                    over 200,000 incidents spanning 1970 to 2020. Goal was it to take the dataset and create an interactive dashboard that allows the user to explore the dataset in a more natural way, while trying to
+                    include everything people might be interested in.
+
+                </p>
+                <p style="margin-top: 16px;">
+                    One of the main challenges was the data quality itself. 1993 is missing entirely, casualty 
+                    figures are often incomplete, and coverage varies significantly by region aswell as time. Rather than hiding 
+                    those gaps, the design tries to make them visible and communicate the limitations clearly by adding a big disclaimer before letting people explore the data.
+                </p>
+
+                <h2 style="margin-top: 40px;">What I built</h2>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-circle-dot"></i> <strong>Disclaimer screen</strong>before the data loads, covering what the dataset includes, what's missing, and its limitations</li>
+                    <li><i class="fa-solid fa-circle-dot"></i> <strong>Country View</strong>to select any country to see incidents on the map alongside breakdowns of attack types, active groups, and trends over time</li>
+                    <li><i class="fa-solid fa-circle-dot"></i> <strong>Group Activity View</strong>to compare up to 5 groups side by side, showing where and when they were active</li>
+                    <li><i class="fa-solid fa-circle-dot"></i> <strong>Three map display modes</strong>for clustered markers, a density heatmap, and individual incident dots with hover details</li>
+                    <li><i class="fa-solid fa-circle-dot"></i> <strong>combined timeline</strong>tracking incidents, deaths, and injuries together</li>
+                </ul>
+
+                <h2 style="margin-top: 40px;">How it came together</h2>
+                <p>
+                    The project followed a user-centered design process starting with defining target audiences 
+                    and working through sketches and layout iterations before writing any code. A central map 
+                    made the most sense given how geographic the data is, and two main views emerged from thinking 
+                    about different use cases: one focused on countries, one on specific groups.
+                </p>
+                <p style="margin-top: 16px;">
+                    After building an initial prototype, I ran a think-aloud study with a small group of users (3 iterations with other students). 
+                    That session showed some small usability flaws, which I implemented into the final version. Some changes were
+                    a darker map style, improved zoom, consistent color use and more.
+                    If you'd like to learn more about the project, feel free to check out my GitHub repository or send me an email.
+                </p>
+            </div>
+            <aside>
+                <div class="meta-card">
+                    <h3>Tech Stack</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Streamlit</li>
+                        <li>Pandas</li>
+                        <li>Plotly</li>
+                    </ul>
+                </div>
+                <div class="meta-card">
+                    <h3>Dataset</h3>
+                    <ul>
+                        <li>GTD 2021 release</li>
+                        <li>209,706 incidents</li>
+                        <li>1970-2020 (1993 excluded)</li>
+                        <li>135 variables per incident</li>
+                    </ul>
+                </div>
+                <div class="meta-card">
+                    <h3>Links</h3>
+                    <div class="meta-links">
+                        <a href="https://github.com/Dennues/GTD_Dashboard" class="meta-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.start.umd.edu/data-tools/GTD" class="meta-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Dataset (GTD)
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- screenshot gallery -->
+        <section class="project-gallery">
+            <h2>Dashboard</h2>
+
+            <div class="gallery-featured">
+                <img src="https://raw.githubusercontent.com/Dennues/GTD_Dashboard/main/screenshots/countryview1.png" alt="Countryview Map" id="featured-img" style="cursor:pointer">
+            </div>
+
+            <div class="gallery-grid" id="gallery" style="margin-top: 16px;">
+                <img src="https://raw.githubusercontent.com/Dennues/GTD_Dashboard/main/screenshots/countryview2.png" alt="Countryview Graphs">
+                <img src="https://raw.githubusercontent.com/Dennues/GTD_Dashboard/main/screenshots/groups1.png" alt="Groups Map">
+                <img src="https://raw.githubusercontent.com/Dennues/GTD_Dashboard/main/screenshots/groups2.png" alt="Groups Graphs">
+                <img src="https://raw.githubusercontent.com/Dennues/GTD_Dashboard/main/screenshots/heatmap.png" alt="Map heatmap view">
+                <img src="https://raw.githubusercontent.com/Dennues/GTD_Dashboard/main/screenshots/individual.png" alt="Map individual incident view">
+                <img src="https://raw.githubusercontent.com/Dennues/GTD_Dashboard/main/screenshots/disclaimer.png" alt="Disclaimer Screen">
+            </div>
+
+            <div class="lightbox" id="lightbox">
+                <button class="lightbox-close" id="lightbox-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <img id="lightbox-img" src="" alt="">
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const gallery = document.getElementById('gallery');
+        const featured = document.getElementById('featured-img');
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        const lbClose = document.getElementById('lightbox-close');
+
+        const openLightbox = (src) => {
+            lbImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        gallery.addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG') openLightbox(e.target.src);
+        });
+
+        featured.addEventListener('click', () => openLightbox(featured.src));
+
+        const close = () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        lbClose.addEventListener('click', close);
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) close(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    </script>
+</body>
+</html>
